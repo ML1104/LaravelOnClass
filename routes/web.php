@@ -46,3 +46,11 @@ Route::get('cats', function () {
 
     \App\Cat::where('id', 2)->update(['name' => "Marry"]);
 });
+
+Route::get('todos', function () {
+//    $todos = \App\Todos::all();
+//    foreach ($todos as $todo) {
+//        echo $todo->title . "<p>";
+//    }
+    return view('todos');
+});
