@@ -54,3 +54,8 @@ Route::get('todos', function () {
 //    }
     return view('todos');
 });
+
+Route::get('/todo', 'TodosController@index')->name('todo');
+Route::get('/todo/create', 'TodosController@create');
+Route::post('/todo', 'TodosController@store');
+Route::get('todo/{id}', 'TodosController@show');
